@@ -15,7 +15,12 @@ export default {
     };
   },
   mounted() {
-    this.map = L.map("mapContainer", { renderer: L.canvas() }).setView([45.526, -122.667], 12);
+    const startingPoint = [
+      40.85702287934112, 
+      -75.27748249179868
+    ]
+
+    this.map = L.map("mapContainer", { renderer: L.canvas() }).setView(startingPoint, 12);
     L.tileLayer("http://{s}.tile.osm.org/{z}/{x}/{y}.png", {
       attribution:
         '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
