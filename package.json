@@ -11,6 +11,8 @@
     "core-js": "^3.6.5",
     "esri-leaflet": "^3.0.1",
     "leaflet": "^1.7.1",
+    "primeicons": "^4.1.0",
+    "primevue": "^3.3.5",
     "vue": "^3.0.0"
   },
   "devDependencies": {

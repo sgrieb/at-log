@@ -1,14 +1,15 @@
 <template>
-  <Map  />
+  <!-- <Map  /> -->
+  <Button label="Submit" />
 </template>
 
 <script>
-import Map from './components/Map.vue'
+// import Map from './components/Map.vue'
 
 export default {
   name: 'App',
   components: {
-    Map
+    // Map
   }
 }
 </script>
