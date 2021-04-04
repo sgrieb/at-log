@@ -15,14 +15,17 @@ export default {
     };
   },
   mounted() {
-    this.map = L.map("mapContainer").setView([45.526, -122.667], 12);
+    this.map = L.map("mapContainer", { renderer: L.canvas() }).setView([45.526, -122.667], 12);
     L.tileLayer("http://{s}.tile.osm.org/{z}/{x}/{y}.png", {
       attribution:
         '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
     }).addTo(this.map);
 
     esri.featureLayer({
-      url: 'https://services1.arcgis.com/fBc8EJBxQRMcHlei/ArcGIS/rest/services/ANST_Facilities/FeatureServer/8'
+      url: 'https://services1.arcgis.com/fBc8EJBxQRMcHlei/ArcGIS/rest/services/ANST_Facilities/FeatureServer/8',
+      renderer: L.canvas(),
+      simplifyFactor: 0.35,
+      precision: 5,
     }).addTo(this.map);
   },
   beforeUnmount() {
